@@ -4,8 +4,18 @@
   box-sizing: border-box;
 }
 
+body,
+html {
+  overflow-x: hidden;
+}
+
 body {
   background-color: #000000;
+  font-family: "Satoshi-Variable", "Helvetica Neue", "Helvetica", "Arial",
+    sans-serif;
+  letter-spacing: normal;
+  line-height: normal;
+  -webkit-font-smoothing: antialiased;
 }
 
 .header {
@@ -26,7 +36,6 @@ body {
   height: 59vh;
 
   padding: 0 10px;
-  font-family: sans-serif;
 }
 
 .services-container {
@@ -80,6 +89,7 @@ body {
   height: 300px;
   width: 300px;
   border-radius: 300px;
+  /* border: 1px solid black; */
 
   position: absolute;
   align-self: center;
@@ -300,6 +310,10 @@ body {
   height: 100%;
 }
 
+.about-container:hover .shapes {
+  background-color: white;
+}
+
 .contact-us-container {
   grid-column: 3/5;
   grid-row: 2/3;
@@ -402,4 +416,233 @@ body {
   to {
     left: -125%;
   }
+}
+
+/* Spinning Circle */
+.spinning-circle {
+  transition: transform 0.3s ease;
+  display: flex;
+  align-items: flex-end;
+}
+
+.spinning-circle > svg {
+  text-transform: uppercase;
+  color: white;
+  /* border-radius: 200px; */
+}
+
+.text-path {
+  font-size: 18px;
+  letter-spacing: 12px;
+}
+
+.services-section {
+  margin: 10px;
+  padding: 70px 60px;
+  background-color: #1b1b1f;
+  border-radius: 70px;
+  display: flex;
+}
+
+.services-section-text {
+  width: 90%;
+}
+
+.services-section-text > p:nth-of-type(1) {
+  text-transform: uppercase;
+  font-size: 17px;
+  margin-bottom: 45px;
+  letter-spacing: 1px;
+}
+
+.services-section-text > p:nth-of-type(2) {
+  font-size: 90px;
+  font-stretch: extra-expanded;
+  /* letter-spacing: 1px; */
+  font-weight: 400;
+  line-height: 1.1;
+}
+
+.services-section-text > p {
+  color: #a5a1ff;
+}
+
+.below {
+  height: 100vh;
+}
+
+.ethic {
+  margin: 10px;
+  height: 35vh;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+.ethic-description {
+  position: absolute;
+  left: 40%;
+  background-color: #1b1b1f;
+  height: 100%;
+  width: 50%;
+  /* border-radius: 70px; */
+  border-top-left-radius: 70px;
+  border-bottom-left-radius: 70px;
+  transition: left 0.1s linear;
+}
+
+.ethic-title {
+  position: absolute;
+  right: 50%;
+  background-color: #a5a1ff;
+  height: 100%;
+  border: 1px solid #a5a1ff;
+  width: 52.5%;
+  border-radius: 70px;
+  transition: right 0.1s linear;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #1b1b1f;
+}
+
+.ethic-title > p:nth-of-type(1) {
+  margin-bottom: 30px;
+  font-size: 22px;
+}
+
+.ethic-title > p:nth-of-type(2) {
+  font-size: 44px;
+  font-weight: 750;
+  letter-spacing: -0.035em;
+  margin: 0;
+  line-height: 88%;
+}
+
+.contact-us-section {
+  margin: 10px;
+  padding: 70px 60px;
+  border-radius: 70px;
+  background-color: #1d1c16;
+  color: #d4c951;
+
+  display: flex;
+}
+
+.contact-us-section > div:nth-of-type(1) {
+  width: 85%;
+}
+
+.contact-us-section-title {
+  text-transform: uppercase;
+  font-size: 17px;
+  margin-bottom: 45px;
+  letter-spacing: 1px;
+}
+
+.contact-us-section-description {
+  font-size: 90px;
+  font-stretch: extra-expanded;
+  font-weight: 400;
+  line-height: 1.1;
+}
+
+.contact-form-wheel {
+  font-size: 18px;
+  letter-spacing: 5px;
+  font-weight: 500;
+}
+
+.contact-links {
+  margin-top: 90px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+
+  width: 50%;
+}
+
+.contact-links > p {
+  border-radius: 30px;
+  padding: 15px 20px;
+  border: 2px solid #d4c951;
+
+  display: flex;
+  justify-content: center;
+
+  width: fit-content;
+  font-size: 20px;
+  font-weight: 500;
+  min-width: 25%;
+
+  position: relative;
+  background-position: 0 -100%;
+  background-size: 50% 50%;
+
+  background-color: transparent;
+  overflow: hidden;
+  transition: background-color 0.5s ease;
+}
+
+.contact-links > p > span {
+  position: absolute;
+  transform: translate(0, 20px);
+  visibility: hidden;
+  transition: visibility 0.1s linear, transform 0.1s linear;
+}
+
+.contact-links > p:hover .contact-links-title {
+  visibility: visible;
+  transform: translate(0, 0px);
+  transition: visibility 0.1s linear 0.1s, transform 0.1s linear 0.1s;
+}
+
+.contact-links > p:hover {
+  color: #1d1c16;
+  /* background-image: linear-gradient(to bottom, #fff480, #fff480); */
+  background-color: #fff480;
+  /* transition: background-color 0.5s ease; */
+  background-size: 100% 200%;
+  background-position: 0 0;
+  transition: color 0.1s linear 0.1s, background-color 0.1s linear 0.1s,
+    background-size 0.1s linear 0.1s;
+}
+
+.contact-links .fa-brands {
+  visibility: visible;
+  transform: translate(0, 0);
+  transition: visibility 0.1s linear 0.1s, transform 0.1s linear 0.1s;
+}
+
+.contact-links > p:hover .fa-brands {
+  /* opacity: 0; */
+  visibility: hidden;
+  transform: translate(0, -15px);
+  transition: visibility 0.1s linear, transform 0.1s linear;
+}
+
+.contact-form {
+  display: flex;
+}
+
+.contact-form > div {
+  width: 70%;
+}
+
+.contact-form input,
+textarea {
+  background-color: #1d1c16;
+  border: none;
+  border-radius: 70px;
+}
+
+.contact-form > div > div > input {
+  width: 30%;
+  gap: 5%;
+}
+
+.below {
+  height: 100vh;
 }
