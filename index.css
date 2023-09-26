@@ -760,6 +760,25 @@ textarea {
     grid-row-end: 5;
   }
 
+  .ethics {
+    /* width: 100%; */
+    /* border: 1px solid red; */
+    padding: 0;
+  }
+
+  .ethic {
+    /* border: 1px solid blue; */
+    margin: 0;
+  }
+
+  .ethic-description {
+    display: none;
+  }
+
+  .ethic-title {
+    width: 100%;
+  }
+
   .contact-us-container {
     grid-column-start: 1;
     grid-column-end: 3;
@@ -783,7 +802,7 @@ textarea {
   }
 
   .services-section,
-  .ethics,
+  /* .ethics, */
   .contact-us-section {
     margin: 5px;
     padding: 40px 30px;
