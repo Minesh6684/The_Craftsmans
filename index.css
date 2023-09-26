@@ -557,11 +557,22 @@ body {
 
 .contact-links {
   margin-top: 90px;
+  /* display: flex; */
+  /* flex-direction: column; */
+  gap: 20px;
   display: flex;
   flex-wrap: wrap;
   gap: 15px;
+  /* border: 1px solid red; */
 
-  width: 95%;
+  width: fit-content;
+}
+
+.contact-links > div {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  /* justify-content: space-between; */
 }
 
 /* .contact-links > p:nth-of-type(1),
@@ -761,14 +772,11 @@ textarea {
   }
 
   .ethics {
-    /* width: 100%; */
-    /* border: 1px solid red; */
     padding: 0;
   }
 
   .ethic {
-    /* border: 1px solid blue; */
-    margin: 0;
+    margin: 10px 5px;
   }
 
   .ethic-description {
